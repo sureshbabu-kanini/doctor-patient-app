@@ -1,0 +1,24 @@
+<div>
+    <label for="specialization">Select Specialization:</label>
+    <select id="specialization" [(ngModel)]="specialization">
+      <option value="">-- Select Specialization --</option>
+      <option *ngFor="let spec of specializations" [value]="spec">{{ spec }}</option>
+    </select>
+    <button (click)="searchDoctorsBySpecialization()">Search</button>
+  </div>
+  
+  <div *ngIf="isLoading">Loading...</div>
+  
+  <div *ngIf="doctors.length > 0">
+    <h3>Doctors</h3>
+    <ul>
+      <li *ngFor="let doctor of doctors">
+        {{ doctor.doctor_Name }} (Specialization: {{ doctor.specialization }})
+        <br>
+        Phone: {{ doctor.doctor_No }}
+      </li>
+    </ul>
+  </div>
+  
+  <div *ngIf="doctors.length === 0 && !isLoading">No doctors found.</div>
+  

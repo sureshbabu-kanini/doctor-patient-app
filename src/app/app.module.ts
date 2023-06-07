@@ -1,16 +1,50 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { DoctorListComponent } from './doctor/doctor-list/doctor-list.component';
+import { DoctorDetailsComponent } from './doctor/doctor-details/doctor-details.component';
+import { DoctorCreateComponent } from './doctor/doctor-create/doctor-create.component';
+import { DoctorEditComponent } from './doctor/doctor-edit/doctor-edit.component';
+import { PatientListComponent } from './patient/patient-list/patient-list.component';
+import { PatientDetailsComponent } from './patient/patient-details/patient-details.component';
+import { PatientCreateComponent } from './patient/patient-create/patient-create.component';
+import { PatientEditComponent } from './patient/patient-edit/patient-edit.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
+import { DoctorDeleteComponent } from './doctor/doctor-delete/doctor-delete.component';
+import { PatientDeleteComponent } from './patient/patient-delete/patient-delete.component';
+import { DoctorPatientCountComponent } from './doctor/doctor-patient-count/doctor-patient-count.component';
+import { HomeComponent } from './home/home/home.component';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ToastrModule } from 'ngx-toastr';
+import { PatientDoctorSpecializationComponent } from './patient/patient-doctor-specialization/patient-doctor-specialization.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    DoctorListComponent,
+    DoctorDetailsComponent,
+    DoctorCreateComponent,
+    DoctorEditComponent,
+    PatientListComponent,
+    PatientDetailsComponent,
+    PatientCreateComponent,
+    PatientEditComponent,
+    DoctorDeleteComponent,
+    PatientDeleteComponent,
+    DoctorPatientCountComponent,
+    HomeComponent,
+    PatientDoctorSpecializationComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    HttpClientModule,
+    ReactiveFormsModule,
+    BrowserAnimationsModule,
+    ToastrModule.forRoot(),
   ],
   providers: [],
   bootstrap: [AppComponent]

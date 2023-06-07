@@ -1,0 +1,14 @@
+<div class="doctor-patient-count-container">
+  <h2>Doctor Patient Count</h2>
+
+  <div class="count-info">
+    <div>
+      <label for="doctorIdInput">Doctor ID:</label>
+      <input type="number" id="doctorIdInput" [(ngModel)]="doctorId" />
+    </div>
+    <br>
+    <button (click)="getPatientCount()">Get Count</button>
+    <br><br>
+    <p>Patient Count: {{ patientCount }}</p>
+  </div>
+</div>

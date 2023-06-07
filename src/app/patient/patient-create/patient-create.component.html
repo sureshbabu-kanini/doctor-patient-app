@@ -1,0 +1,43 @@
+<div class="patient-create-container">
+  <h2>Create Patient</h2>
+  <form (ngSubmit)="createPatient()">
+    <!-- Name input field -->
+    <div class="form-group">
+      <label for="patientName">Name:</label>
+      <input type="text" id="patientName" [(ngModel)]="patient.patient_Name" name="patientName" required>
+      <!-- Display validation error message if it exists -->
+      <div class="validation-error" *ngIf="validationErrors?.patient_Name?.length > 0">{{ validationErrors?.patient_Name[0] }}</div>
+    </div>
+
+    <!-- Other input fields with validation error display -->
+    <div class="form-group">
+      <label for="disease">Disease:</label>
+      <input type="text" id="disease" [(ngModel)]="patient.disease" name="disease" required>
+      <!-- Display validation error message if it exists -->
+      <div class="validation-error" *ngIf="validationErrors?.disease?.length > 0">{{ validationErrors?.disease[0] }}</div>
+    </div>
+    <div class="form-group">
+      <label for="email">Email:</label>
+      <input type="email" id="email" [(ngModel)]="patient.email" name="email" required>
+      <!-- Display validation error message if it exists -->
+      <div class="validation-error" *ngIf="validationErrors?.email?.length > 0">{{ validationErrors?.email[0] }}</div>
+    </div>
+    <div class="form-group">
+      <label for="patientNo">Phone Number:</label>
+      <input type="text" id="patientNo" [(ngModel)]="patient.patient_No" name="patientNo" required>
+      <!-- Display validation error message if it exists -->
+      <div class="validation-error" *ngIf="validationErrors?.patient_No?.length > 0">{{ validationErrors?.patient_No[0] }}</div>
+    </div>
+    <div class="form-group">
+      <label for="doctor">Doctor:</label>
+      <select id="doctor" [(ngModel)]="patient.doctor" name="doctor" required>
+        <option *ngFor="let doctor of doctors" [ngValue]="doctor">{{ doctor.doctor_Name }}</option>
+      </select>
+      <!-- Display validation error message if it exists -->
+      <div class="validation-error" *ngIf="validationErrors?.doctor?.length > 0">{{ validationErrors?.doctor[0] }}</div>
+    </div>
+    <br>
+    <br>
+    <button type="submit">Create</button>
+  </form>
+</div>

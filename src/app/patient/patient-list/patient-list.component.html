@@ -1,0 +1,22 @@
+<div class="container">
+  <table class="table">
+    <thead>
+      <tr>
+        <th>Patient ID</th>
+        <th>Name</th>
+        <th>Disease</th>
+        <th>Email</th>
+        <th>Contact Number</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let patient of patients">
+        <td>{{ patient.patient_Id }}</td>
+        <td>{{ patient.patient_Name }}</td>
+        <td>{{ patient.disease }}</td>
+        <td>{{ patient.email }}</td>
+        <td>{{ patient.patient_No }}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

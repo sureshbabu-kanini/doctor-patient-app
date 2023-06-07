@@ -1,0 +1,78 @@
+/* CSS for Doctor List Table */
+.container{
+max-width: 900px;
+}
+
+.heading{
+  text-align: center;
+}
+
+.table {
+    width: 100%;
+    border-collapse: collapse;
+    border: 1px solid #000000;
+  }
+  
+  .table th{
+    background-color: rgb(217, 127, 9);
+    padding: 12px;
+    text-align: center;
+  }
+
+  .table td {
+    padding: 12px;
+    text-align: center;
+  }
+
+  .table tbody tr:nth-child(even) {
+    background-color: #f9f9f9;
+  }
+  
+  .table tbody tr:hover {
+    background-color: #e6e6e6;
+  }
+  
+  /* Responsive CSS for Doctor List Table */
+  @media (max-width: 768px) {
+    .table {
+      display: block;
+      overflow-x: auto;
+      white-space: nowrap;
+    }
+  
+    .table thead,
+    .table tbody,
+    .table th,
+    .table td,
+    .table tr {
+      display: block;
+    }
+  
+    .table thead tr {
+      position: absolute;
+      top: -9999px;
+      left: -9999px;
+    }
+  
+    .table tbody tr {
+      border-bottom: 1px solid #ddd;
+    }
+  
+    .table td {
+      border: none;
+      position: relative;
+      padding-left: 50%;
+    }
+  
+    .table td:before {
+      position: absolute;
+      top: 6px;
+      left: 6px;
+      width: 45%;
+      padding-right: 10px;
+      white-space: nowrap;
+      content: attr(data-label);
+      font-weight: bold;
+    }
+  }
+  

@@ -1,0 +1,88 @@
+/* Styling for the patient details container */
+.patient-details-container {
+    background-color: #f2f2f2;
+    padding: 20px;
+  }
+  
+  /* Styling for the patient details section */
+  .patient-details {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  /* Styling for the input container */
+  .input-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  /* Styling for the label */
+  .label {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  /* Styling for the input */
+  #patientId {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  /* Styling for the get details button */
+  .get-details-button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Styling for the patient card */
+  .patient-card {
+    background-color: #fff;
+    border: 1px solid #ccc;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  /* Styling for the patient info */
+  .patient-info {
+    margin-bottom: 10px;
+  }
+  
+  /* Styling for the label */
+  .label {
+    font-weight: bold;
+  }
+  
+  /* Styling for the value */
+  .value {
+    margin-left: 10px;
+  }
+  
+  /* Styling for the loading text */
+  .loading-text {
+    margin-top: 10px;
+    font-style: italic;
+    color: #777;
+  }
+  
+  /* Styling for the delete button */
+  .delete-button {
+    padding: 5px 10px;
+    background-color: #dc3545;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  /* Styling for the button container */
+  .button-container {
+    text-align: center;
+  }
+  

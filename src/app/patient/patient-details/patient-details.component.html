@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="doctor-details-container">
+      <h1>Patient Details</h1>
+      <div>
+        <label for="patientIdInput">Patient ID:</label>
+        <input type="number" id="patientIdInput" [(ngModel)]="patientId" required>
+        <br>
+        <br>
+        <button (click)="getPatientDetails()">Get Details</button>
+      </div>
+      <br>
+      <div *ngIf="loading" class="loading-message">
+        <p>Loading patient details...</p>
+      </div>
+  
+      <div *ngIf="error" class="error-message">
+        <p>{{ error }}</p>
+      </div>
+  
+      <div *ngIf="patient" class="doctor-card">
+        <div class="doctor-info">
+          <h2>Patient Details</h2>
+          <p>Patient ID: {{ patient.patient_Id }}</p>
+          <p>Name: {{ patient.patient_Name }}</p>
+          <p>Disease: {{ patient.disease }}</p>
+          <p>Email: {{ patient.email }}</p>
+          <p>Contact Number: {{ patient.patient_No }}</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  

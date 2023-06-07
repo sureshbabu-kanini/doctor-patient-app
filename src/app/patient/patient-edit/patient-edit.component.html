@@ -1,0 +1,37 @@
+<div class="container">
+    <div class="patient-edit-container">
+      <h1>Edit Patient</h1>
+  
+      <div>
+        <label for="patientId">Enter Patient ID:</label>
+        <br>
+        <input type="text" id="patientId" [(ngModel)]="patientId">
+        <br><br>
+        <button class="btn-get-details" (click)="getPatientDetails()">Get Details</button>
+        <br>
+        <br>
+      </div>
+  
+      <div *ngIf="showPatientForm" class="patient-form">
+        <div>
+          <label for="patientName">Patient Name:</label>
+          <input type="text" id="patientName" [(ngModel)]="patient.patient_Name" name="patientName">
+        </div>
+        <div>
+          <label for="disease">Disease:</label>
+          <input type="text" id="disease" [(ngModel)]="patient.disease" name="disease">
+        </div>
+        <div>
+          <label for="email">Email:</label>
+          <input type="text" id="email" [(ngModel)]="patient.email" name="email">
+        </div>
+        <div>
+          <label for="patientNo">Patient Number:</label>
+          <input type="text" id="patientNo" [(ngModel)]="patient.patient_No" name="patientNo">
+        </div>
+        <br>
+        <button class="btn-update" (click)="updatePatientDetails()">Update Patient</button>
+      </div>
+    </div>
+  </div>
+  

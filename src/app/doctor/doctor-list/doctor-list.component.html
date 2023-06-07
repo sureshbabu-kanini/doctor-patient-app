@@ -1,0 +1,27 @@
+<div class="heading">
+<h1>Doctor List</h1>
+</div>
+<br>
+
+<div class="container">
+<table class="table">
+  <thead>
+    <tr>
+      <th>Doctor ID</th>
+      <th>Doctor Name</th>
+      <th>Specialization</th>
+      <th>Doctor Number</th>
+      <!-- Add more table headers as needed -->
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let doctor of doctors">
+      <td>{{ doctor.doctor_Id }}</td>
+      <td>{{ doctor.doctor_Name }}</td>
+      <td>{{ doctor.specialization }}</td>
+      <td>{{ doctor.doctor_No }}</td>
+      <!-- Add more table cells as needed -->
+    </tr>
+  </tbody>
+</table>
+</div>

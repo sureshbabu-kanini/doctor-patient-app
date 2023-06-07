@@ -1,0 +1,30 @@
+<div class="doctor-details-container">
+  <div class="doctor-details">
+    <h2>Doctor Details</h2>
+    <div class="input-container">
+      <label for="doctorId">Doctor ID:</label>
+      <input type="number" id="doctorId" [(ngModel)]="doctorId" name="doctorId">
+      <button class="get-details-button" (click)="getDoctorDetails()">Get Details</button>
+    </div>
+    <div *ngIf="doctor" class="doctor-card">
+      <div class="doctor-info">
+        <div class="label">Name:</div>
+        <div class="value">{{ doctor.doctor_Name }}</div>
+      </div>
+      <div class="doctor-info">
+        <div class="label">Specialty:</div>
+        <div class="value">{{ doctor.specialization }}</div>
+      </div>
+      <div class="doctor-info">
+        <div class="label">Doctor Number:</div>
+        <div class="value">{{ doctor.doctor_No }}</div>
+      </div>
+      <!-- Add more doctor details if needed -->
+    </div>
+    <div *ngIf="!doctor" class="loading-text">Loading doctor details...</div>
+    <br>
+    <div class="button-container" *ngIf="doctor">
+      <button class="delete-button" (click)="deleteDoctor()">Delete Doctor</button>
+    </div>
+  </div>
+</div>

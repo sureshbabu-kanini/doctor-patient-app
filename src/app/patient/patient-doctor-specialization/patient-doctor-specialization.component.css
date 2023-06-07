@@ -1,0 +1,52 @@
+.search-container {
+    max-width: 400px;
+    margin: 0 auto;
+    margin-top: 20px;
+  }
+  
+  .input-container {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  input {
+    padding: 5px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+  
+  .search-button {
+    margin-left: 10px;
+    padding: 5px 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .loading-text,
+  .no-results-text {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  .doctors-list {
+    margin-top: 20px;
+  }
+  
+  .doctor-name {
+    font-weight: bold;
+    margin-right: 10px;
+  }
+  
+  .doctor-specialization {
+    color: #555;
+  }
+  

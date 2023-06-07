@@ -1,0 +1,87 @@
+/* Styling for the doctor details container */
+.doctor-details-container {
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+/* Styling for the doctor details section */
+.doctor-details {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* Styling for the input container */
+.input-container {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+/* Styling for the label */
+.label {
+  font-weight: bold;
+  margin-right: 10px;
+}
+
+/* Styling for the input */
+#doctorId {
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+/* Styling for the get details button */
+.get-details-button {
+  margin-left: 10px;
+  padding: 5px 10px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Styling for the doctor card */
+.doctor-card {
+  background-color: #fff;
+  border: 1px solid #ccc;
+  padding: 20px;
+  border-radius: 5px;
+}
+
+/* Styling for the doctor info */
+.doctor-info {
+  margin-bottom: 10px;
+}
+
+/* Styling for the label */
+.label {
+  font-weight: bold;
+}
+
+/* Styling for the value */
+.value {
+  margin-left: 10px;
+}
+
+/* Styling for the loading text */
+.loading-text {
+  margin-top: 10px;
+  font-style: italic;
+  color: #777;
+}
+
+/* Styling for the delete button */
+.delete-button {
+  padding: 5px 10px;
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+/* Styling for the button container */
+.button-container {
+  text-align: center;
+}

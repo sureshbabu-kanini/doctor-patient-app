@@ -1,0 +1,32 @@
+<div class="container">
+  <div class="doctor-edit-container">
+    <h1>Edit Doctor</h1>
+
+    <div>
+      <label for="doctorId">Enter Doctor ID:</label>
+      <br>
+      <input type="text" id="doctorId" [(ngModel)]="doctorId">
+      <br><br>
+      <button (click)="getDoctorDetails()">Get Details</button>
+      <br>
+      <br>
+    </div>
+
+    <div *ngIf="doctor" class="doctor-form">
+      <div>
+        <label for="doctorName">Doctor Name:</label>
+        <input type="text" id="doctorName" [(ngModel)]="doctor.doctor_Name" name="doctorName">
+      </div>
+      <div>
+        <label for="specialization">Specialization:</label>
+        <input type="text" id="specialization" [(ngModel)]="doctor.specialization" name="specialization">
+      </div>
+      <div>
+        <label for="doctorNo">Doctor Number:</label>
+        <input type="text" id="doctorNo" [(ngModel)]="doctor.doctor_No" name="doctorNo">
+      </div>
+      <br>
+      <button (click)="updateDoctor()">Update Doctor</button>
+    </div>
+  </div>
+</div>
