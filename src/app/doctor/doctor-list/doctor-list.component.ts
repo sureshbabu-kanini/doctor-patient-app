@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Doctor } from 'src/app/models/doctor.interface';
+import { Patient } from 'src/app/models/patient.interface';
 import { DoctorService } from '../doctor.service';
-import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-doctor-list',
@@ -10,7 +10,8 @@ import { Subscription } from 'rxjs';
 })
 export class DoctorListComponent implements OnInit {
   doctors: Doctor[] = [];
-  subscription: Subscription = new Subscription();
+  doctor: Doctor = { doctor_Id: 0, doctor_Name: null, specialization: null, doctor_No: 0, imageData: null, patients: null };
+  showEditModal: boolean = false;
 
   constructor(private doctorService: DoctorService) {}
 
@@ -19,7 +20,7 @@ export class DoctorListComponent implements OnInit {
   }
 
   getDoctors(): void {
-    this.subscription = this.doctorService.getDoctors().subscribe({
+    this.doctorService.getDoctors().subscribe({
       next: (doctors: Doctor[]) => {
         this.doctors = doctors;
       },
@@ -29,7 +30,37 @@ export class DoctorListComponent implements OnInit {
     });
   }
 
-  ngOnDestroy(): void {
-    this.subscription.unsubscribe();
+  openEditModal(doctor: Doctor): void {
+    this.doctor = { ...doctor };
+    this.showEditModal = true;
+  }
+
+  updateDoctor(): void {
+    if (this.doctor) {
+      this.doctorService.updateDoctor(this.doctor.doctor_Id, this.doctor).subscribe({
+        next: () => {
+          this.getDoctors();
+          this.closeEditModal();
+        },
+        error: (error: any) => {
+          console.log(error);
+        }
+      });
+    }
+  }
+
+  deleteDoctor(doctor: Doctor): void {
+    this.doctorService.deleteDoctor(doctor.doctor_Id).subscribe({
+      next: () => {
+        this.getDoctors();
+      },
+      error: (error: any) => {
+        console.error(error);
+      }
+    });
+  }
+
+  closeEditModal(): void {
+    this.showEditModal = false;
   }
 }

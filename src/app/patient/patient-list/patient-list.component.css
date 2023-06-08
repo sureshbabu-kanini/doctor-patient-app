@@ -1,29 +1,166 @@
-.container {
-    max-width: 900px;
-  }
-  
-  .table {
-    width: 100%;
-    border-collapse: collapse;
-    border: 1px solid #000000;
-  }
-  
-  .table th {
-    background-color: rgb(217, 127, 9);
-    padding: 12px;
-    text-align: center;
-  }
-  
-  .table td {
-    padding: 12px;
-    text-align: center;
-  }
-  
-  .table tbody tr:nth-child(even) {
-    background-color: #f9f9f9;
-  }
-  
-  .table tbody tr:hover {
-    background-color: #e6e6e6;
-  }
-  
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #f2f2f2;
+}
+
+section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px; /* Gap between the cards */
+}
+
+.card-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card {
+  margin: 10px;
+}
+
+
+.card::before {
+  content: "";
+  position: absolute;
+  height: 40%;
+  width: 100%;
+  background: #D3D3D3;
+  border-radius: 20px 20px 0 0;
+}
+
+.card .card-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  position: relative;
+  z-index: 100;
+}
+
+.card .image {
+  height: 80px; /* Adjusted height */
+  width: 80px; /* Adjusted width */
+  border-radius: 50%;
+  padding: 3px;
+  background: #D3D3D3;
+}
+
+.card .image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid #fff;
+}
+
+.card .media-icons {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.card .media-icons i {
+  color: #fff;
+  opacity: 0.6;
+  margin-top: 10px;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.card .media-icons i:hover {
+  opacity: 1;
+}
+
+.card .name-profession {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 10px;
+}
+
+.name-profession .name {
+  font-size: 16px; /* Adjusted font size */
+  font-weight: 600;
+}
+
+.name-profession .profession {
+  font-size: 12px; /* Adjusted font size */
+  font-weight: 500;
+}
+
+.card .rating {
+  display: flex;
+  align-items: center;
+  margin-top: 12px; /* Adjusted margin */
+}
+
+.card .rating i {
+  font-size: 14px; /* Adjusted font size */
+  margin: 0 2px;
+  color: #D3D3D3;
+}
+
+.card .button {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 16px; /* Adjusted margin */
+  margin-right: 10px;
+  margin-left: 10px;
+}
+
+.aboutMe {
+  background: #4baa58;
+  outline: none;
+  border: none;
+  color: #fff;
+  padding: 6px 16px; /* Adjusted padding */
+  border-radius: 20px;
+  font-size: 10px; /* Adjusted font size */
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.hireMe {
+  background: #ff0000;
+  outline: none;
+  border: none;
+  color: #fff;
+  padding: 6px 16px; /* Adjusted padding */
+  border-radius: 20px;
+  font-size: 10px; /* Adjusted font size */
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.button button:hover {
+  background: #6616d0;
+}
+
+.credit a {
+  text-decoration: none;
+  color: #D3D3D3;
+  font-weight: 800;
+}
+
+.credit {
+  text-align: center;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}

@@ -1,22 +1,28 @@
 <div class="container">
-  <table class="table">
-    <thead>
-      <tr>
-        <th>Patient ID</th>
-        <th>Name</th>
-        <th>Disease</th>
-        <th>Email</th>
-        <th>Contact Number</th>
-      </tr>
-    </thead>
-    <tbody>
-      <tr *ngFor="let patient of patients">
-        <td>{{ patient.patient_Id }}</td>
-        <td>{{ patient.patient_Name }}</td>
-        <td>{{ patient.disease }}</td>
-        <td>{{ patient.email }}</td>
-        <td>{{ patient.patient_No }}</td>
-      </tr>
-    </tbody>
-  </table>
+  <div class="card-wrapper">
+    <div class="card" *ngFor="let patient of patients">
+      <div class="card-content">
+        <div class="image">
+          <img src="https://cdn.pixabay.com/photo/2018/11/13/21/43/instagram-3814049__340.png" alt="">
+        </div>
+        <div class="media-icons">
+        </div>
+
+        <div class="name-profession">
+          <span class="name">{{ patient.patient_Name }}</span>
+          <span class="profession">{{ patient.disease }}</span>
+          <span class="profession">{{ patient.email }}</span>
+          <span class="profession">{{ patient.patient_No }}</span>
+        </div>
+
+        <div class="rating">
+        </div>
+
+        <div class="button">
+          <button class="aboutMe">Edit</button>
+          <button class="hireMe">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>

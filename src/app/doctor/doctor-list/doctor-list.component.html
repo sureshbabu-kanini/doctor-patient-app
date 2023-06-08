@@ -1,27 +1,40 @@
-<div class="heading">
-<h1>Doctor List</h1>
-</div>
-<br>
-
 <div class="container">
-<table class="table">
-  <thead>
-    <tr>
-      <th>Doctor ID</th>
-      <th>Doctor Name</th>
-      <th>Specialization</th>
-      <th>Doctor Number</th>
-      <!-- Add more table headers as needed -->
-    </tr>
-  </thead>
-  <tbody>
-    <tr *ngFor="let doctor of doctors">
-      <td>{{ doctor.doctor_Id }}</td>
-      <td>{{ doctor.doctor_Name }}</td>
-      <td>{{ doctor.specialization }}</td>
-      <td>{{ doctor.doctor_No }}</td>
-      <!-- Add more table cells as needed -->
-    </tr>
-  </tbody>
-</table>
+  <div class="card-wrapper">
+    <div class="card" *ngFor="let doctor of doctors">
+      <div class="card-content">
+        <div class="image">
+          <img src="https://cdn.pixabay.com/photo/2018/11/13/21/43/instagram-3814049__340.png" alt="">
+        </div>
+        <div class="name-profession">
+          <span class="name">Doctor: {{ doctor.doctor_Name }}</span><br>
+          <span class="profession">Specialization: {{ doctor.specialization }}</span><br>
+          <span class="profession">Phone Number: {{ doctor.doctor_No }}</span><br>
+        </div>
+        <div class="button">
+          <button class="edit" (click)="openEditModal(doctor)">Edit</button>
+          <button class="delete" (click)="deleteDoctor(doctor)">Delete</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Add edit form overlay -->
+<div class="overlay" *ngIf="showEditModal">
+  <div class="modal">
+    <h2>Edit Doctor</h2>
+    <form (submit)="updateDoctor()">
+      <label for="name">Doctor Name</label>
+      <input type="text" id="name" name="name" [(ngModel)]="doctor.doctor_Name" required>
+
+      <label for="specialization">Specialization</label>
+      <input type="text" id="specialization" name="specialization" [(ngModel)]="doctor.specialization" required>
+
+      <label for="phone">Phone Number</label>
+      <input type="text" id="phone" name="phone" [(ngModel)]="doctor.doctor_No" required>
+
+      <button type="submit">Update</button>
+      <button type="button" (click)="closeEditModal()">Cancel</button>
+    </form>
+  </div>
 </div>

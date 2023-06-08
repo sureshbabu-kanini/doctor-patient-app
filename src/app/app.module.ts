@@ -19,6 +19,8 @@ import { HomeComponent } from './home/home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { ToastrModule } from 'ngx-toastr';
 import { PatientDoctorSpecializationComponent } from './patient/patient-doctor-specialization/patient-doctor-specialization.component';
+import { LoginFormComponent } from './Login/login-form/login-form.component';
+import { RegisterFormComponent } from './Register/register-form/register-form.component';
 
 @NgModule({
   declarations: [
@@ -35,7 +37,9 @@ import { PatientDoctorSpecializationComponent } from './patient/patient-doctor-s
     PatientDeleteComponent,
     DoctorPatientCountComponent,
     HomeComponent,
-    PatientDoctorSpecializationComponent
+    PatientDoctorSpecializationComponent,
+    LoginFormComponent,
+    RegisterFormComponent
   ],
   imports: [
     BrowserModule,
