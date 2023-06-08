@@ -7,5 +7,6 @@
       email: string | null;
       patient_No: number;
       doctor: Doctor | null;
+      editMode?: boolean; // Add the 'editMode' property here
     }
     

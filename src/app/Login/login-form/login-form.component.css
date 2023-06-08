@@ -48,4 +48,9 @@
     background-color: #ccc;
     cursor: not-allowed;
   }
+
+  .login-component {
+    color: black;
+  }
+  
   

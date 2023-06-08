@@ -26,6 +26,7 @@ const routes: Routes = [
   { path: 'patients/:id/edit', component: PatientEditComponent },
   { path: 'patients/:id/delete', component: PatientDeleteComponent },
   { path: 'patients/:id/doctorcount', component: PatientDoctorSpecializationComponent },
+  
   { path: '', redirectTo: 'doctors', pathMatch: 'full' },
   { path: '**', redirectTo: 'doctors', pathMatch: 'full' } // Redirect to doctors for any other route
 ];

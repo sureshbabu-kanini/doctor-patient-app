@@ -16,6 +16,12 @@
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   width: 300px;
   padding: 20px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .image img {
@@ -87,6 +93,11 @@
   flex-direction: column;
 }
 
+.fixed-image-size {
+  width: 200px;
+  height: 200px;
+}
+
 .modal label {
   margin-top: 10px;
 }
@@ -96,6 +107,12 @@
   border: 1px solid #ccc;
   border-radius: 5px;
   margin-top: 5px;
+  transition: border-color 0.3s ease;
+}
+
+.modal input:focus {
+  border-color: #5f9ea0;
+  outline: none;
 }
 
 .modal-buttons {
@@ -110,5 +127,55 @@
 
 .modal-buttons .cancel {
   background-color: #ff4500;
+}
+
+.modal .textbox-container {
+  position: relative;
+  margin-top: 10px;
+}
+
+.modal .textbox-container input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  transition: border-color 0.3s ease;
+}
+
+.modal .textbox-container input:focus {
+  border-color: #5f9ea0;
+  outline: none;
+}
+
+.modal .textbox-container .edit-icon {
+  position: absolute;
+  top: 50%;
+  right: 10px;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #5f9ea0;
+  cursor: pointer;
+}
+
+.modal .textbox-container .edit-icon:hover {
+  color: #31708f;
+}
+.card {
+  /* ... other styles ... */
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+}
+
+.flipped {
+  transform: rotateY(180deg);
+}
+
+.card-content {
+  /* ... other styles ... */
+  backface-visibility: hidden;
+}
+
+.card-content.back {
+  position: absolute;
+  transform: rotateY(180deg);
 }
 

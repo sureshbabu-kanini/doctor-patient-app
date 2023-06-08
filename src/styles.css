@@ -1,1 +1,30 @@
 /* You can add global styles to this file, and also import other style files */
+.dark-mode {
+    background-color: #1f1f1f;
+    color: #ffffff;
+  }
+  
+  .dark-mode mat-slide-toggle.mat-checked .mat-slide-toggle-bar {
+    background-color: #4caf50;
+  }
+  
+  .dark-mode mat-slide-toggle .mat-slide-toggle-thumb {
+    background-color: #ffffff;
+  }
+  
+  .dark-mode mat-slide-toggle.mat-checked .mat-slide-toggle-thumb {
+    background-color: #ffffff;
+  }
+  
+  .dark-mode mat-slide-toggle .mat-slide-toggle-bar {
+    background-color: #9e9e9e;
+  }
+  
+  .dark-mode mat-slide-toggle.mat-checked .mat-slide-toggle-bar {
+    background-color: #4caf50;
+  }
+  
+  .dark-mode-toggle .mat-slide-toggle-content {
+    color: black;
+  }
+      

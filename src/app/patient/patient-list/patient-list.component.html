@@ -1,26 +1,28 @@
 <div class="container">
   <div class="card-wrapper">
-    <div class="card" *ngFor="let patient of patients">
+    <div class="card" *ngFor="let patient of patients; let i = index">
       <div class="card-content">
         <div class="image">
-          <img src="https://cdn.pixabay.com/photo/2018/11/13/21/43/instagram-3814049__340.png" alt="">
+          <img [src]="imageClasses[i]" alt="" class="fixed-image-size">
         </div>
-        <div class="media-icons">
-        </div>
-
         <div class="name-profession">
-          <span class="name">{{ patient.patient_Name }}</span>
-          <span class="profession">{{ patient.disease }}</span>
-          <span class="profession">{{ patient.email }}</span>
-          <span class="profession">{{ patient.patient_No }}</span>
+          <span class="name" *ngIf="!patient.editMode">{{ patient.patient_Name }}</span>
+          <input class="name" [(ngModel)]="patient.patient_Name" *ngIf="patient.editMode" />
+          <br>
+          <span class="profession" *ngIf="!patient.editMode">Disease: {{ patient.disease }}</span>
+          <input class="profession" [(ngModel)]="patient.disease" *ngIf="patient.editMode" />
+          <br>
+          <span class="profession" *ngIf="!patient.editMode">Email: {{ patient.email }}</span>
+          <input class="profession" [(ngModel)]="patient.email" *ngIf="patient.editMode" />
+          <br>
+          <span class="profession" *ngIf="!patient.editMode">Phone Number: {{ patient.patient_No }}</span>
+          <input class="profession" [(ngModel)]="patient.patient_No" *ngIf="patient.editMode" />
+          <br>
         </div>
-
-        <div class="rating">
-        </div>
-
         <div class="button">
-          <button class="aboutMe">Edit</button>
-          <button class="hireMe">Delete</button>
+          <button *ngIf="!patient.editMode" class="edit" (click)="enableEditMode(patient)">Edit</button>
+          <button *ngIf="patient.editMode" class="edit" (click)="savePatient(patient)">Save</button>
+          <button class="delete" (click)="deletePatient(patient)">Delete</button>
         </div>
       </div>
     </div>

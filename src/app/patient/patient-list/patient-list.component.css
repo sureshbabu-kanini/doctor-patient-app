@@ -1,166 +1,125 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Poppins', sans-serif;
-}
-
-body {
-  height: 100vh;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background: #f2f2f2;
-}
-
-section {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 20px; /* Gap between the cards */
+.container {
+  background-color: #f0f0f0;
+  padding: 20px;
 }
 
 .card-wrapper {
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
+  justify-content: space-between;
+  gap: 20px;
 }
 
 .card {
-  margin: 10px;
-}
-
-
-.card::before {
-  content: "";
-  position: absolute;
-  height: 40%;
-  width: 100%;
-  background: #D3D3D3;
-  border-radius: 20px 20px 0 0;
-}
-
-.card .card-content {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  width: 300px;
   padding: 20px;
-  position: relative;
-  z-index: 100;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.card .image {
-  height: 80px; /* Adjusted height */
-  width: 80px; /* Adjusted width */
-  border-radius: 50%;
-  padding: 3px;
-  background: #D3D3D3;
+.card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 
-.card .image img {
-  height: 100%;
+.image img {
   width: 100%;
-  object-fit: cover;
-  border-radius: 50%;
-  border: 3px solid #fff;
 }
 
-.card .media-icons {
-  position: absolute;
-  top: 10px;
-  right: 10px;
+.name-profession {
+  margin-top: 10px;
+}
+
+.button {
+  margin-top: 20px;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  justify-content: space-between;
 }
 
-.card .media-icons i {
+.button button {
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: none;
   color: #fff;
-  opacity: 0.6;
-  margin-top: 10px;
-  transition: all 0.3s ease;
   cursor: pointer;
+  font-weight: bold;
 }
 
-.card .media-icons i:hover {
-  opacity: 1;
+.button .edit {
+  background-color: #5f9ea0;
 }
 
-.card .name-profession {
+.button .delete {
+  background-color: #ff4500;
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal {
+  background-color: #fff;
+  padding: 20px;
+}
+
+.modal h2 {
+  margin-top: 0;
+}
+
+.modal form {
   display: flex;
   flex-direction: column;
-  align-items: center;
+}
+
+.fixed-image-size {
+  width: 200px;  /* Adjust the width as needed */
+  height: 200px; /* Adjust the height as needed */
+}
+
+.modal label {
   margin-top: 10px;
 }
 
-.name-profession .name {
-  font-size: 16px; /* Adjusted font size */
-  font-weight: 600;
+.modal input {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  margin-top: 5px;
 }
 
-.name-profession .profession {
-  font-size: 12px; /* Adjusted font size */
-  font-weight: 500;
-}
-
-.card .rating {
+.modal-buttons {
   display: flex;
-  align-items: center;
-  margin-top: 12px; /* Adjusted margin */
+  justify-content: flex-end;
+  margin-top: 20px;
 }
 
-.card .rating i {
-  font-size: 14px; /* Adjusted font size */
-  margin: 0 2px;
-  color: #D3D3D3;
-}
-
-.card .button {
-  width: 100%;
-  display: flex;
-  justify-content: space-around;
-  margin-top: 16px; /* Adjusted margin */
-  margin-right: 10px;
+.modal-buttons button {
   margin-left: 10px;
 }
 
-.aboutMe {
-  background: #4baa58;
-  outline: none;
-  border: none;
-  color: #fff;
-  padding: 6px 16px; /* Adjusted padding */
-  border-radius: 20px;
-  font-size: 10px; /* Adjusted font size */
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-.hireMe {
-  background: #ff0000;
-  outline: none;
-  border: none;
-  color: #fff;
-  padding: 6px 16px; /* Adjusted padding */
-  border-radius: 20px;
-  font-size: 10px; /* Adjusted font size */
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-.button button:hover {
-  background: #6616d0;
-}
-
-.credit a {
-  text-decoration: none;
-  color: #D3D3D3;
-  font-weight: 800;
-}
-
-.credit {
-  text-align: center;
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
+.modal-buttons .cancel {
+  background-color: #ff4500;
 }

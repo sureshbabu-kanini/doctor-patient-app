@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { Doctor } from 'src/app/models/doctor.interface';
-import { Patient } from 'src/app/models/patient.interface';
 import { DoctorService } from '../doctor.service';
 
 @Component({
@@ -10,8 +9,17 @@ import { DoctorService } from '../doctor.service';
 })
 export class DoctorListComponent implements OnInit {
   doctors: Doctor[] = [];
-  doctor: Doctor = { doctor_Id: 0, doctor_Name: null, specialization: null, doctor_No: 0, imageData: null, patients: null };
-  showEditModal: boolean = false;
+  imageClasses: string[] = [
+    'https://sarahscoop.com/wp-content/uploads/2021/10/sanji-one-piece.jpg',
+    'https://images.wondershare.com/filmora/article-images/2-kakashi-hatake.jpg',
+    'https://i0.wp.com/ravingotaku.com/wp-content/uploads/2022/04/anime-characters-with-pink-hair1.jpg?resize=500%2C287&ssl=1',
+    'https://wealthofgeeks.com/wp-content/uploads/2023/01/Kamado-Tanjiro-1024x576.jpg',
+    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm3OQgsEZxn-GTfqZlWb4ZffnZX_gj_F8iOA&usqp=CAU',
+    'https://cdn.myanimelist.net/s/common/uploaded_files/1471938539-558bcd453e4ab393e9ded080689e5d60.jpeg',
+    'https://www.pngfind.com/pngs/m/77-779869_kawaii-anime-cutest-blue-haired-anime-character-blue.png',
+    'https://i0.wp.com/animegalaxyofficial.com/wp-content/uploads/2022/07/20220730_205207-min.jpg?resize=750%2C422&ssl=1',
+    'https://www.wallpaperup.com/uploads/wallpapers/2016/01/28/883875/371456acf7c746615f6f1a06ff17d00c-700.jpg'
+  ];
 
   constructor(private doctorService: DoctorService) {}
 
@@ -30,23 +38,19 @@ export class DoctorListComponent implements OnInit {
     });
   }
 
-  openEditModal(doctor: Doctor): void {
-    this.doctor = { ...doctor };
-    this.showEditModal = true;
+  enableEditMode(doctor: Doctor): void {
+    doctor.editMode = true;
   }
 
-  updateDoctor(): void {
-    if (this.doctor) {
-      this.doctorService.updateDoctor(this.doctor.doctor_Id, this.doctor).subscribe({
-        next: () => {
-          this.getDoctors();
-          this.closeEditModal();
-        },
-        error: (error: any) => {
-          console.log(error);
-        }
-      });
-    }
+  updateDoctor(doctor: Doctor): void {
+    this.doctorService.updateDoctor(doctor.doctor_Id, doctor).subscribe({
+      next: () => {
+        this.getDoctors();
+      },
+      error: (error: any) => {
+        console.log(error);
+      }
+    });
   }
 
   deleteDoctor(doctor: Doctor): void {
@@ -58,9 +62,5 @@ export class DoctorListComponent implements OnInit {
         console.error(error);
       }
     });
-  }
-
-  closeEditModal(): void {
-    this.showEditModal = false;
   }
 }

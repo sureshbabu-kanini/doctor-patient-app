@@ -7,5 +7,6 @@
         doctor_No: number;
         imageData: string | null;
         patients: Patient[] | null;
+        editMode?: boolean; // Add the 'editMode' property
       }
       

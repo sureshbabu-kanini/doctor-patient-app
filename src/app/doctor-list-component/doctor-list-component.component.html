@@ -1,0 +1,15 @@
+<h2>Doctor List</h2>
+<div *ngIf="doctors.length > 0">
+  <ul>
+    <li *ngFor="let doctor of doctors">
+      <div class="doctor-details">
+        <p><strong>Name:</strong> {{ doctor.doctor_Name }}</p>
+        <p><strong>Specialization:</strong> {{ doctor.specialization }}</p>
+        <p><strong>Phone Number:</strong> {{ doctor.doctor_No }}</p>
+      </div>
+    </li>
+  </ul>
+</div>
+<div *ngIf="doctors.length === 0">
+  <p>No doctors found with the given specialization.</p>
+</div>

@@ -21,6 +21,10 @@ import { ToastrModule } from 'ngx-toastr';
 import { PatientDoctorSpecializationComponent } from './patient/patient-doctor-specialization/patient-doctor-specialization.component';
 import { LoginFormComponent } from './Login/login-form/login-form.component';
 import { RegisterFormComponent } from './Register/register-form/register-form.component';
+import { SearchBarComponent } from './Search/search-bar/search-bar.component';
+import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { Renderer2 } from '@angular/core';
+
 
 @NgModule({
   declarations: [
@@ -39,7 +43,8 @@ import { RegisterFormComponent } from './Register/register-form/register-form.co
     HomeComponent,
     PatientDoctorSpecializationComponent,
     LoginFormComponent,
-    RegisterFormComponent
+    RegisterFormComponent,
+    SearchBarComponent
   ],
   imports: [
     BrowserModule,
@@ -48,6 +53,7 @@ import { RegisterFormComponent } from './Register/register-form/register-form.co
     HttpClientModule,
     ReactiveFormsModule,
     BrowserAnimationsModule,
+    MatSlideToggleModule,
     ToastrModule.forRoot(),
   ],
   providers: [],

@@ -1,3 +1,59 @@
 .asdf{
     float: right;
 }
+
+.slide{
+    margin-left: 580px;
+    padding: auto;
+    padding-top: 9px;
+    white-space: nowrap;
+}
+/* Example styling for mat-slide-toggle */
+
+/* Change the color of the slide toggle */
+.mat-slide-toggle {
+    color: #ffffff; /* Change to desired text color */
+  }
+  
+  /* Change the color of the slide toggle when it is checked */
+  .mat-slide-toggle.mat-checked .mat-slide-toggle-bar {
+    background-color: #2196f3; /* Change to desired checked color */
+  }
+  
+  /* Change the color of the slide toggle thumb */
+  .mat-slide-toggle .mat-slide-toggle-thumb {
+    background-color: #ffffff; /* Change to desired thumb color */
+  }
+  
+  /* Change the color of the slide toggle thumb when it is checked */
+  .mat-slide-toggle.mat-checked .mat-slide-toggle-thumb {
+    background-color: #ffffff; /* Change to desired checked thumb color */
+  }
+  
+  /* Change the color of the slide toggle track */
+  .mat-slide-toggle .mat-slide-toggle-bar {
+    background-color: #9e9e9e; /* Change to desired track color */
+  }
+  
+  /* Change the color of the slide toggle track when it is checked */
+  .mat-slide-toggle.mat-checked .mat-slide-toggle-bar {
+    background-color: #4caf50; /* Change to desired checked track color */
+  }
+  
+  /* Add transition effects to the slide toggle */
+  .mat-slide-toggle-thumb {
+    transition: transform 0.3s;
+  }
+  
+  .mat-slide-toggle.mat-checked .mat-slide-toggle-thumb {
+    transform: translateX(16px); /* Adjust to desired thumb translation */
+  }
+  
+  .mat-slide-toggle-thumb-container {
+    transition: background-color 0.3s;
+  }
+  
+  .mat-slide-toggle.mat-checked .mat-slide-toggle-thumb-container {
+    background-color: #4caf50; /* Change to desired checked thumb background color */
+  }
+  

@@ -1,0 +1,25 @@
+<div class="search-bar">
+  <input type="text" placeholder="Search by specialization" [(ngModel)]="specialization">
+  <button (click)="searchDoctorsBySpecialization()">Search</button>
+</div>
+
+<!-- <div class="doctor-list" *ngIf="doctors && doctors.length > 0">
+  <h3>Doctors with Specialization - {{ doctors[0].specialization }}</h3>
+  <ul>
+    <li *ngFor="let doctor of doctors">
+      <div class="doctor-details">
+        <p><strong>Name:</strong> {{ doctor.doctor_Name }}</p>
+        <p><strong>Specialization:</strong> {{ doctor.specialization }}</p>
+        <p><strong>Phone Number:</strong> {{ doctor.doctor_No }}</p>
+      </div>
+    </li>
+  </ul>
+</div> -->
+
+<!-- <div *ngIf="doctors && doctors.length === 0 && !isLoading">
+  <p>No doctors found with the given specialization.</p>
+</div> -->
+
+<!-- <div *ngIf="isLoading">
+  <p>Loading...</p>
+</div> -->

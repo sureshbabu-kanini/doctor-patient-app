@@ -1,0 +1,89 @@
+/* CSS for the search bar */
+.search-bar {
+  display: flex;
+  align-items: center;
+  margin-top: 6px;
+}
+
+.search-bar input[type="text"] {
+  height: 30px;
+  padding: 5px;
+  border: none;
+  border-radius: 3px;
+}
+
+.search-bar button {
+  margin-left: 5px;
+  height: 30px;
+  padding: 5px 10px;
+  border: none;
+  border-radius: 3px;
+  background-color: #ddd;
+  cursor: pointer;
+}
+
+/* Adjust the navbar layout to accommodate the search bar */
+.navbar-nav {
+  align-items: center;
+  margin-left: auto;
+}
+
+.nav-item {
+  position: relative;
+}
+
+.nav-item .dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  z-index: 1000;
+  display: none;
+  float: left;
+  min-width: 10rem;
+  padding: 0.5rem 0;
+  margin: 0.125rem 0 0;
+  font-size: 1rem;
+  color: #212529;
+  text-align: left;
+  background-color: #fff;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  border-radius: 0.25rem;
+}
+
+.nav-item:hover .dropdown-menu {
+  display: block;
+}
+
+.search-bar button {
+  margin-left: 5px;
+  height: 30px;
+  padding: center;
+  border: none;
+  border-radius: 3px;
+  background-color: #001cee;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  color: #ccc;
+}
+
+.search-bar button:hover {
+  background-color: #ff0000;
+}
+
+.search-bar button:active {
+  background-color: #aaa;
+}
+
+
+/* Media queries for responsiveness */
+@media screen and (max-width: 600px) {
+  .search-bar input {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .doctor-details {
+    font-size: 14px;
+  }
+}
