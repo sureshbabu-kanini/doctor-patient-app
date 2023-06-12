@@ -24,6 +24,7 @@ import { RegisterFormComponent } from './Register/register-form/register-form.co
 import { SearchBarComponent } from './Search/search-bar/search-bar.component';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
 import { Renderer2 } from '@angular/core';
+import { AdminLoginComponent } from './admin-login/admin-login.component';
 
 
 @NgModule({
@@ -44,7 +45,8 @@ import { Renderer2 } from '@angular/core';
     PatientDoctorSpecializationComponent,
     LoginFormComponent,
     RegisterFormComponent,
-    SearchBarComponent
+    SearchBarComponent,
+    AdminLoginComponent
   ],
   imports: [
     BrowserModule,

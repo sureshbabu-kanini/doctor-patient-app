@@ -2,6 +2,8 @@ import { Component } from '@angular/core';
 import { Router } from '@angular/router';
 import { DoctorService } from '../doctor.service';
 import { Doctor } from 'src/app/models/doctor.interface';
+import { Subscription } from 'rxjs';
+import {MatSlideToggleModule} from '@angular/material/slide-toggle';
 
 @Component({
   selector: 'app-doctor-create',
@@ -16,7 +18,9 @@ export class DoctorCreateComponent {
     doctor_No: 0,
     imageData: '',
     patients: null
-  }; // Create an instance of the Doctor class
+  };
+
+  private doctorSubscription: Subscription | undefined;
 
   constructor(
     private doctorService: DoctorService,
@@ -24,13 +28,21 @@ export class DoctorCreateComponent {
   ) { }
 
   createDoctor(): void {
-    this.doctorService.createDoctor(this.ndoctor).subscribe(
-      () => {
+    this.doctorSubscription = this.doctorService.createDoctor(this.ndoctor).subscribe({
+      next: () => {
         this.router.navigate(['/doctors']);
       },
-      (error: any) => {
+      error: (error: any) => {
         console.log(error);
       }
-    );
+    });
   }
+
+  ngOnDestroy(): void {
+    if (this.doctorSubscription) {
+      this.doctorSubscription.unsubscribe();
+    }
+  }
+
+  
 }

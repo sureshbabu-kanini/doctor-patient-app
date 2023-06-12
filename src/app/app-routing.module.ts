@@ -12,8 +12,12 @@ import { PatientEditComponent } from './patient/patient-edit/patient-edit.compon
 import { DoctorPatientCountComponent } from './doctor/doctor-patient-count/doctor-patient-count.component';
 import { PatientDeleteComponent } from './patient/patient-delete/patient-delete.component';
 import { PatientDoctorSpecializationComponent } from './patient/patient-doctor-specialization/patient-doctor-specialization.component';
+import { AdminLoginComponent } from './admin-login/admin-login.component';
+import { LoginFormComponent } from './Login/login-form/login-form.component';
+import { RegisterFormComponent } from './Register/register-form/register-form.component';
 
 const routes: Routes = [
+
   { path: 'doctors', component: DoctorListComponent },
   { path: 'doctors/create', component: DoctorCreateComponent },
   { path: 'doctors/:id', component: DoctorDetailsComponent },
@@ -25,10 +29,12 @@ const routes: Routes = [
   { path: 'patients/:id', component: PatientDetailsComponent },
   { path: 'patients/:id/edit', component: PatientEditComponent },
   { path: 'patients/:id/delete', component: PatientDeleteComponent },
+  { path: 'admin', component: AdminLoginComponent },
+  { path: 'login', component: LoginFormComponent },
+  { path: 'register', component: RegisterFormComponent },
   { path: 'patients/:id/doctorcount', component: PatientDoctorSpecializationComponent },
-  
-  { path: '', redirectTo: 'doctors', pathMatch: 'full' },
-  { path: '**', redirectTo: 'doctors', pathMatch: 'full' } // Redirect to doctors for any other route
+  { path: '', redirectTo: 'login', pathMatch: 'full' },
+  { path: '**', redirectTo: 'login', pathMatch: 'full' } // Redirect to doctors for any other route
 ];
 
 @NgModule({

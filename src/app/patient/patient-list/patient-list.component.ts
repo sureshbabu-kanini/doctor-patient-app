@@ -15,15 +15,13 @@ export class PatientListComponent implements OnInit {
   patients: Patient[] = [];
   originalPatients: Patient[] = [];
   imageClasses: string[] = [
-    'https://sarahscoop.com/wp-content/uploads/2021/10/sanji-one-piece.jpg',
-    'https://images.wondershare.com/filmora/article-images/2-kakashi-hatake.jpg',
-    'https://i0.wp.com/ravingotaku.com/wp-content/uploads/2022/04/anime-characters-with-pink-hair1.jpg?resize=500%2C287&ssl=1',
-    'https://wealthofgeeks.com/wp-content/uploads/2023/01/Kamado-Tanjiro-1024x576.jpg',
-    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm3OQgsEZxn-GTfqZlWb4ZffnZX_gj_F8iOA&usqp=CAU',
-    'https://cdn.myanimelist.net/s/common/uploaded_files/1471938539-558bcd453e4ab393e9ded080689e5d60.jpeg',
-    'https://www.pngfind.com/pngs/m/77-779869_kawaii-anime-cutest-blue-haired-anime-character-blue.png',
-    'https://i0.wp.com/animegalaxyofficial.com/wp-content/uploads/2022/07/20220730_205207-min.jpg?resize=750%2C422&ssl=1',
-    'https://www.wallpaperup.com/uploads/wallpapers/2016/01/28/883875/371456acf7c746615f6f1a06ff17d00c-700.jpg'
+'https://www.nia.nih.gov/sites/default/files/inline-images/working-with-diverse-older-patients-inline.jpg',
+'https://thumbs.dreamstime.com/b/portrait-young-man-patient-lying-hospital-bed-pose-thumb-up-nice-smile-confident-treatments-process-healthcare-169416272.jpg',
+'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRwoMggakuY38dHN12E_enWNUVghLgrILrutzcqP9IAWis4s5qRHcoWAe4j1vXQsiEf1IU&usqp=CAU',
+'https://as1.ftcdn.net/v2/jpg/04/30/30/20/1000_F_430302093_4apxcOx3vEUkv5SoikIXYPOitBIiDyT7.jpg',
+'https://www.shutterstock.com/shutterstock/photos/297349058/display_1500/stock-photo-young-american-man-lying-in-bed-at-hospital-room-sick-or-ill-but-giving-thumbs-up-smiling-happy-and-297349058.jpg',
+'https://as1.ftcdn.net/v2/jpg/03/33/35/30/500_F_333353098_SIvMrdZsgHHn1tHSMxpdifzxO5ivyOjH.jpg',
+'https://d2gg9evh47fn9z.cloudfront.net/800px_COLOURBOX25501631.jpg'
   ];
 
   constructor(private patientService: PatientService) {}

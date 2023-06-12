@@ -9,4 +9,4 @@
         patients: Patient[] | null;
         editMode?: boolean; // Add the 'editMode' property
       }
-      
+              

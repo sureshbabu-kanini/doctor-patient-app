@@ -1,1 +1,21 @@
-<p>register-form works!</p>
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit()">
+    <div>
+      <label for="admin_Name">Name</label>
+      <input type="text" id="admin_Name" formControlName="admin_Name">
+      <div *ngIf="registerForm.get('admin_Name')?.touched && registerForm.get('admin_Name')?.errors?.['required']" class="error-message">Name is required</div>
+    </div>
+    <div>
+      <label for="admin_Email">Email</label>
+      <input type="email" id="admin_Email" formControlName="admin_Email">
+      <div *ngIf="registerForm.get('admin_Email')?.touched && registerForm.get('admin_Email')?.errors?.['required']" class="error-message">Email is required</div>
+      <div *ngIf="registerForm.get('admin_Email')?.touched && registerForm.get('admin_Email')?.errors?.['email']" class="error-message">Invalid email format</div>
+    </div>
+    <div>
+      <label for="admin_Password">Password</label>
+      <input type="password" id="admin_Password" formControlName="admin_Password">
+      <div *ngIf="registerForm.get('admin_Password')?.touched && registerForm.get('admin_Password')?.errors?.['required']" class="error-message">Password is required</div>
+      <div *ngIf="registerForm.get('admin_Password')?.touched && registerForm.get('admin_Password')?.errors?.['minlength']" class="error-message">Password should be at least 6 characters long</div>
+    </div>
+    <button type="submit">Register</button>
+  </form>
+  

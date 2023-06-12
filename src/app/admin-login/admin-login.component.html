@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Admin Login Page</title>
+</head>
+<body>
+  <div class="login-container">
+    <div class="login-form">
+      <h2>User Login</h2>
+      <form (ngSubmit)="login(username.value, password.value)">
+        <div>
+          <input type="text" placeholder="User Email" required pattern=".*\S+.*" oninput="checkValidity(this)" #username>
+          <div class="error-message">Please enter a valid email address.</div>
+        </div>
+        <div>
+          <input type="password" placeholder="User Password" required pattern=".*\S+.*" oninput="checkValidity(this)" #password>
+          <div class="error-message">Please enter a password.</div>
+        </div>
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  </div>
+</body>
+</html>

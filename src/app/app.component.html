@@ -1,10 +1,12 @@
-<!-- <app-register-form></app-register-form>
-<app-login-form></app-login-form> -->
-
+<!-- <br> -->
+<!-- <app-register-form></app-register-form> -->
+<!-- <br> -->
+<!-- <app-admin-login></app-admin-login> -->
 <!-- <br> -->
 
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
+<div class="hoooo">
+<div *ngIf="!isUserSideRoute()">
 <nav class="navbar navbar-expand-lg navbar-light-grey">
   <a class="navbar-brand" href="#" style="color:black;margin-left: 20px;">
     <img src="https://tse3.mm.bing.net/th?id=OIP.TJJTxiixW65leEedhm1q7wHaHa&pid=Api&P=0&h=180" height="25" style="border-radius: 10px;margin-right: 10px;" class="logo-image">Hospital Management - Admin
@@ -43,13 +45,14 @@
           <a class="dropdown-item" href="#" style="color:black;" routerLink="patients/create">Add</a>
           <a class="dropdown-item" href="#" style="color:black;" routerLink="patients/:id/edit">Update</a>
           <a class="dropdown-item" href="#" style="color:black;" routerLink="patients/:id/delete">Delete</a>
-          <!-- <a class="dropdown-item" href="#" style="color:black;" routerLink="patients/:id/doctorcount">Patient count</a> -->
         </div>
       </li>
       <app-search-bar></app-search-bar>
     </ul>
   </div>
 </nav>
+</div>
+</div>
 
 <br>
 

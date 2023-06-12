@@ -10,15 +10,14 @@ import { DoctorService } from '../doctor.service';
 export class DoctorListComponent implements OnInit {
   doctors: Doctor[] = [];
   imageClasses: string[] = [
-    'https://sarahscoop.com/wp-content/uploads/2021/10/sanji-one-piece.jpg',
-    'https://images.wondershare.com/filmora/article-images/2-kakashi-hatake.jpg',
-    'https://i0.wp.com/ravingotaku.com/wp-content/uploads/2022/04/anime-characters-with-pink-hair1.jpg?resize=500%2C287&ssl=1',
-    'https://wealthofgeeks.com/wp-content/uploads/2023/01/Kamado-Tanjiro-1024x576.jpg',
-    'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQm3OQgsEZxn-GTfqZlWb4ZffnZX_gj_F8iOA&usqp=CAU',
-    'https://cdn.myanimelist.net/s/common/uploaded_files/1471938539-558bcd453e4ab393e9ded080689e5d60.jpeg',
-    'https://www.pngfind.com/pngs/m/77-779869_kawaii-anime-cutest-blue-haired-anime-character-blue.png',
-    'https://i0.wp.com/animegalaxyofficial.com/wp-content/uploads/2022/07/20220730_205207-min.jpg?resize=750%2C422&ssl=1',
-    'https://www.wallpaperup.com/uploads/wallpapers/2016/01/28/883875/371456acf7c746615f6f1a06ff17d00c-700.jpg'
+'https://www.kauveryhospital.com/doctorimage/recent/Dr-Deepak-Kumar2022-09-12-11:55:50am.jpg',
+'https://media.istockphoto.com/id/177373093/photo/indian-male-doctor.jpg?s=612x612&w=0&k=20&c=5FkfKdCYERkAg65cQtdqeO_D0JMv6vrEdPw3mX1Lkfg=',
+'https://health.gov/sites/default/files/styles/600_wide/public/2022-06/cadqt.jpg?itok=zn27s5mX',
+'https://cdn.siasat.com/wp-content/uploads/2023/04/Dr-Sudhir-Kumar.png',
+'https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8ZG9jdG9yfGVufDB8fDB8fHww&w=1000&q=80',
+'https://www.apolloclinic.com/assets/images/doctors/2243_DrAvinash.jpg',
+'https://www.woodlandshospital.in/images/doctor-img/ravi-kant-saraogi.jpg',
+'https://www.kauveryhospital.com/doctorimage/recent/salem/Dr_P_V_Dhanapal.jpg'
   ];
 
   constructor(private doctorService: DoctorService) {}
